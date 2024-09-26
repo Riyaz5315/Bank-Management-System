@@ -1,10 +1,10 @@
-#Database Management Banking
+# Database Management Banking
 import mysql.connector as sql
 
 mydb = sql.connect(
             host="localhost",
             user="root",
-            passwd="12345",
+            passwd="", # Enter Your MySQL password
             database="bank"
 )
 
