@@ -15,9 +15,18 @@ CREATE TABLE customers (
     is_active TINYINT(1) DEFAULT 1
 );
 
+# Admin table(To maintain users)
+CREATE TABLE admin (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+
 ## Features
 
 - **Sign In / Sign Up**
+  - Admin Login and User Login
   - Check if User is Registered
   - No User Registration
 
@@ -70,5 +79,9 @@ CREATE TABLE customers (
 - Provides various banking functionalities like balance enquiry, funds transfer, and viewing transaction history, and account closing.
 - Implements object-oriented programming (OOP) for better code management and scalability.
 - Each account has a unique account number.
+
+### Admin Features
+- Admin can see all Registered Users
+- Only Admin can Delete User Account 
 
 Thank you for using the Bank Management System! We hope it helps you manage your bank accounts effectively.
